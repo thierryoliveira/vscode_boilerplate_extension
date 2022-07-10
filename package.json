@@ -10,16 +10,27 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:flutter-clean-arch.generateDomainLayer"
+    "onCommand:flutter-clean-arch.generateUsecase"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "flutter-clean-arch.generateDomainLayer",
-        "title": "Generate domain layer"
+        "command": "flutter-clean-arch.generateUsecase",
+        "title": "Generate usecase"
+      },
+      {
+        "command": "flutter-clean-arch.generateEntity",
+        "title": "Generate entity"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [{
+          "when": "explorerResourceIsFolder",
+          "command": "flutter-clean-arch.generateUsecase",
+          "group": "YourGroup@1"
+      }]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
