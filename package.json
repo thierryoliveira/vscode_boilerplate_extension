@@ -10,7 +10,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:flutter-clean-arch.generateUsecase"
+    "onCommand:flutter-clean-arch.generateUsecase",
+    "onCommand:flutter-clean-arch.generateEntity"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -28,6 +29,11 @@
       "explorer/context": [{
           "when": "explorerResourceIsFolder",
           "command": "flutter-clean-arch.generateUsecase",
+          "group": "YourGroup@1"
+      },
+      {
+          "when": "explorerResourceIsFolder",
+          "command": "flutter-clean-arch.generateEntity",
           "group": "YourGroup@1"
       }]
     }
