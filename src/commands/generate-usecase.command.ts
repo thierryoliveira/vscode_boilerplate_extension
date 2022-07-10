@@ -1,7 +1,6 @@
 import { InputBoxOptions, Uri, window } from "vscode";
 import * as fs from 'fs';
-import { getVSCodeDownloadUrl } from "@vscode/test-electron/out/util";
-import { camelToSnakeCase } from "../extension";
+import { toSnakeCase } from "../extension";
 
 export const generateUsecase = async (uri: Uri) => {
 window.showInformationMessage("Generate usecase");
@@ -12,7 +11,7 @@ window.showInformationMessage("Generate usecase");
     }
     // check if usecases directory exists
     const usecasesPath = `${uri.fsPath}/usecases`;
-    const usecasePath = `${usecasesPath}/${camelToSnakeCase(usecaseName)}.dart`;
+    const usecasePath = `${usecasesPath}/${toSnakeCase(usecaseName)}.dart`;
 
     if (fs.existsSync(usecasesPath)) {
         // check if usecase file exists
