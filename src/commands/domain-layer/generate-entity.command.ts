@@ -1,6 +1,6 @@
 import { InputBoxOptions, Uri, window } from "vscode";
 import * as fs from 'fs';
-import { toSnakeCase } from "../extension";
+import { toSnakeCase } from "../../extension";
 
 export const generateEntity = async (uri: Uri) => {
 window.showInformationMessage("Generate entity");

@@ -1,6 +1,6 @@
 import { InputBoxOptions, Uri, window } from "vscode";
 import * as fs from 'fs';
-import { toSnakeCase } from "../extension";
+import { toSnakeCase } from "../../extension";
 
 export const generateUsecase = async (uri: Uri) => {
 window.showInformationMessage("Generate usecase");
