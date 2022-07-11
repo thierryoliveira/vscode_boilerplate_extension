@@ -54,7 +54,7 @@ window.showInformationMessage("Generate usecase");
 function createUsecaseInterfaceFile(usecaseName: string, path: string) {
     const content = `abstract class ${usecaseName} {
         //TODO: Fix entity name
-        Future<Failure, ExampleEntity> call();
+        Future<Either<Failure, ExampleEntity>> call();
     }
       `;
     fs.writeFileSync(path, content);
@@ -67,7 +67,7 @@ function createUsecaseImplementationFile(usecaseName: string, usecasePath: strin
 
     class ${usecaseName}Impl implements ${usecaseName} {
         @override
-        Future<Failure, ExampleEntity> call() async {
+        Future<Either<Failure, ExampleEntity>> call() async {
 
         }
     }
