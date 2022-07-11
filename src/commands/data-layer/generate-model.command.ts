@@ -26,10 +26,10 @@ window.showInformationMessage("Generate model");
 
 
 function createModelFile(modelName: string, modelPath: string) {
-    const content = `class ${modelName} {
+    const content = `class ${modelName} extends ${modelName.replace('Model', 'Entity')} {
         //TODO: implement your model properties
       
-        //TODO: implement equality
+        //TODO: implement fromMap/fromJson
       }
       `;
     fs.writeFileSync(modelPath, content);

@@ -12,6 +12,7 @@
   "activationEvents": [
     "onCommand:flutter-clean-arch.generateUsecase",
     "onCommand:flutter-clean-arch.generateEntity",
+    "onCommand:flutter-clean-arch.generateRepositoryInterface",
     "onCommand:flutter-clean-arch.generateDomainLayer",
     "onCommand:flutter-clean-arch.generateDatasource",
     "onCommand:flutter-clean-arch.generateModel"
@@ -27,6 +28,10 @@
       {
         "command": "flutter-clean-arch.generateEntity",
         "title": "Generate entity"
+      },
+      {
+        "command": "flutter-clean-arch.generateRepositoryInterface",
+        "title": "Generate repository interface"
       },
       {
         "command": "flutter-clean-arch.generateDomainLayer",
