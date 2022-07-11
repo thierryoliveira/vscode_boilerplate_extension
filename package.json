@@ -6,6 +6,10 @@
   "engines": {
     "vscode": "^1.69.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thierryoliveira/vscode_boilerplate_extension.git"
+  },
   "categories": [
     "Other"
   ],
